@@ -1,3 +1,3 @@
-# Geek_connect
-# Projeto-App-Sp
+# Geek_Connect
+# Projeto-Flutter-Geek
 
