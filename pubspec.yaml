@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
+  smooth_page_indicator: ^1.0.0
+  iconsax: ^0.0.8
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +20,21 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+assets:
+  - 'images/evento2.png'
+  - 'images/evento3.png'
+  - 'images/evento1.png'
+  - 'images/evento4.png'
+  - 'images/evento5.png'
+  - 'images/evento6.png'
+  - 'images/evento7.png'
+  - 'images/evento8.png'
+  - 'images/conta.png'
+  - 'images/banner.png'
+
+# fonts:
+#   - family: Biotit
+#     fonts:
+#       - asset: assets/fonts/ #reescrever os nomes das fontes certo
+#         weight: 700

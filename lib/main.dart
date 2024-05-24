@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:geek_connect/constantes.dart';
+import 'package:geek_connect/main_screen.dart';
+// import 'package:geek_connect/introScreen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp ({Key? key}) : super (key:key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: "Biofit",
+        colorScheme: ColorScheme.fromSeed(seedColor: kprimaryColor),
+        scaffoldBackgroundColor: kbackgroundColor,
+        useMaterial3: true,
       ),
+      home: MainScreen(),   
     );
   }
 }
