@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:geek_connect/constantes.dart';
-import 'package:geek_connect/main_screen.dart';
-// import 'package:geek_connect/introScreen.dart';
-
+import 'package:geek_connect/screens/home_screen.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kbackgroundColor,
         useMaterial3: true,
       ),
-      home: MainScreen(),   
+      home: HomeScreen(),   
     );
   }
 }
