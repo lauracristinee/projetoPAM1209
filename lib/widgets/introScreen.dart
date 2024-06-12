@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:geek_connect/intro_screens/intro_page_1.dart';
 import 'package:geek_connect/intro_screens/intro_page_2.dart';

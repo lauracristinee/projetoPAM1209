@@ -10,10 +10,12 @@ const btnComprar = "Comprar Ingresso";
 const catego = "Categoria";
 const eventossp = "Eventos por SP";
 const all = "Ver tudo";
-const tituloDetalehs = "Avada Kedavra";
+const tituloDetalhes = "Todos os Eventos";
 const barhome = "Home";
 const barfavorito = "Favoritos";
 const barconfig = "Configuração";
+const tituloFavoritos = "Seus favoritos";
+
 
 
 

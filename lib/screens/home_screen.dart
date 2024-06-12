@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geek_connect/widgets/categorias.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 import 'package:geek_connect/widgets/eventos_list.dart';
 import 'package:geek_connect/widgets/home_app_bar.dart';
 import 'package:geek_connect/widgets/home_search_bar.dart';
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const HomeAppBar(),
+                const HomeAppBar(listaFavoritos: [],),
                 const SizedBox(height: 20),
                 const HomeSearchBar(),
                 const SizedBox(height: 20),
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "Categoria", 
+                  catego, 
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold
@@ -54,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 20),
                 Categorias(currentCat: currentCat),
                 const SizedBox(height: 20),
-                EventosList(),
+                const EventosList(),
                 const SizedBox(height: 20),
               ],
             ),

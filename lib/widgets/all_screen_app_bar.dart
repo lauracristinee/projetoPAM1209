@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 import 'package:iconsax/iconsax.dart';
 class AllEventosScreenAppBar extends StatelessWidget {
   const AllEventosScreenAppBar({
@@ -22,10 +23,11 @@ class AllEventosScreenAppBar extends StatelessWidget {
           icon: const Icon(CupertinoIcons.chevron_back),
         ),
         const Spacer(),
-        const Text("Avada Kedavra", 
-        style: TextStyle(
-          fontSize: 20, 
-          fontWeight: FontWeight.bold
+        const Text(
+          tituloDetalhes, 
+          style: TextStyle(
+            fontSize: 20, 
+            fontWeight: FontWeight.bold
           ),
         ),
         const Spacer(),
