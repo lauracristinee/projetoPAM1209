@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 import 'package:iconsax/iconsax.dart';
 // parte de cima do app 
 
@@ -15,7 +16,7 @@ class HomeAppBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Olá!",
+              ola,
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -24,7 +25,7 @@ class HomeAppBar extends StatelessWidget {
             ),
             SizedBox(height: 8), // Espaçamento entre os textos
             Text(
-              "Vamos descobrir eventos!",
+              apresentacao,
               style: TextStyle(fontSize: 16),
             ),
           ],

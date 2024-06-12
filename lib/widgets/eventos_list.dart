@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geek_connect/models/eventos.dart';
 import 'package:geek_connect/screens/all_eventos_screen.dart';
 import 'package:geek_connect/screens/detalhes_eventos.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 import 'package:iconsax/iconsax.dart';
 
 // Aqui é a parte eventos por SP, todos os dados vêm de uma classe Eventos que armazena todos os dados relacionados aos eventos
@@ -18,7 +19,7 @@ class EventosList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              "Eventos por SP",
+              eventossp,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -32,7 +33,7 @@ class EventosList extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                "Ver tudo",
+                all,
                 style: TextStyle(
                     // Estilo "Ver tudo"
                     ),

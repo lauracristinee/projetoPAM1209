@@ -35,8 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 180,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      image: const AssetImage(
+                    image: const DecorationImage(
+                      image: AssetImage(
                         "/images/banner.png"
                       ),
                       fit: BoxFit.fill
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ),
                 const SizedBox(height: 20),
-                Text(
+                const Text(
                   "Categoria", 
                   style: TextStyle(
                     fontSize: 20,

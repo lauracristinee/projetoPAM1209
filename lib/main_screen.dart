@@ -2,7 +2,7 @@
 
 // import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:geek_connect/constantes.dart';
+import 'package:geek_connect/widgets/constantes.dart';
 import 'package:geek_connect/screens/home_screen.dart';
 import 'package:iconsax/iconsax.dart';
 
