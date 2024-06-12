@@ -45,9 +45,9 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                     ),
                   )
                 ),
-                icon: Icon(
-                  widget.eventos.favorito ? Iconsax.heart5 : Iconsax.heart,
-                  color: widget.eventos.favorito ? Colors.red : Colors.black,
+                icon: const Icon(
+                  Iconsax.heart,
+                  color:  Colors.black ,
                   size: 20,),
               ),
             ),

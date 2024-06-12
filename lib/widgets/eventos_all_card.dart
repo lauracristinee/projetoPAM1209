@@ -14,8 +14,8 @@ class EventosCard extends StatelessWidget {
         context,
         MaterialPageRoute(
           builder: (context) => DetalhesScreen(eventos: eventos)
-          ),
         ),
+      ),
       // width: 200,
       child: Stack(
         children: [
@@ -69,12 +69,7 @@ class EventosCard extends StatelessWidget {
                 fixedSize: const Size(30, 30),
               ),
               iconSize: 20,
-              icon: eventos.favorito//!
-                  ? const Icon(
-                      Iconsax.heart5,
-                      color: Colors.red,
-                    )
-                  : const Icon(Iconsax.heart),
+              icon: const Icon(Iconsax.heart),
             ),
           )
         ],
