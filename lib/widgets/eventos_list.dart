@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:geek_connect/models/eventos.dart';
 import 'package:geek_connect/screens/all_eventos_screen.dart';
 import 'package:geek_connect/screens/detalhes_eventos.dart';
+import 'package:geek_connect/screens/favorito_screen.dart';
+// import 'package:geek_connect/screens/favoritos_screen.dart';
 import 'package:geek_connect/widgets/constantes.dart';
 import 'package:iconsax/iconsax.dart';
-
 // Aqui é a parte eventos por SP, todos os dados vêm de uma classe Eventos que armazena todos os dados relacionados aos eventos
 
-class EventosList extends StatelessWidget {
-  const EventosList({super.key});
+class EventosList extends StatefulWidget {
+  const EventosList({Key? key}) : super(key: key);
+
+  @override
+  _EventosListState createState() => _EventosListState();
+}
+
+class _EventosListState extends State<EventosList> {
+  final List<Evento> _listaFavoritos = [];
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +33,35 @@ class EventosList extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            TextButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const AllEventosScreen(),
-                ),
-              ),
-              child: const Text(
-                all,
-                style: TextStyle(
-                    // Estilo "Ver tudo"
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AllEventosScreen(),
                     ),
-              ),
+                  ),
+                  child: const Text(
+                    all,
+                  ),
+                ),
+                IconButton(
+                  icon: const Icon(Iconsax.heart),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FavoritosScreen(
+                          listaFavoritos: _listaFavoritos,
+                        ),
+                      ),
+                    ).then((_) { // atualiza estado
+                      setState(() {});
+                    });
+                  },
+                ),
+              ],
             ),
           ],
         ),
@@ -106,13 +130,25 @@ class EventosList extends StatelessWidget {
                         top: 1,
                         right: 1,
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              if (_listaFavoritos.contains(eventos[index])) {
+                                _listaFavoritos.remove(eventos[index]);
+                              } else {
+                                _listaFavoritos.add(eventos[index]);
+                              }
+                            });
+                          },
+                          iconSize: 20,
                           style: IconButton.styleFrom(
                             backgroundColor: Colors.white,
-                            fixedSize: const Size(30, 30),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
-                          iconSize: 20,
-                          icon: const Icon(Iconsax.heart),
+                          icon: _listaFavoritos.contains(eventos[index])
+                              ? const Icon(Iconsax.heart5, color: Colors.red)
+                              : const Icon(Iconsax.heart),
                         ),
                       ),
                     ],

@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:geek_connect/models/eventos.dart';
+import 'package:geek_connect/screens/favorito_screen.dart';
 import 'package:geek_connect/widgets/constantes.dart';
 import 'package:iconsax/iconsax.dart';
-// parte de cima do app 
 
 class HomeAppBar extends StatelessWidget {
+  final List<Evento> listaFavoritos;
+
   const HomeAppBar({
-    super.key,
-  });
+    Key? key,
+    required this.listaFavoritos,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,24 +27,33 @@ class HomeAppBar extends StatelessWidget {
                 height: 1,
               ),
             ),
-            SizedBox(height: 8), // Espaçamento entre os textos
+            SizedBox(height: 8),
             Text(
-              apresentacao,
+              tituloFavoritos,
               style: TextStyle(fontSize: 16),
             ),
           ],
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FavoritosScreen(
+                  listaFavoritos: listaFavoritos,
+                ),
+              ),
+            );
+          },
           style: IconButton.styleFrom(
+            backgroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
-            backgroundColor: Colors.white,
-            fixedSize: const Size(55, 55),
+            fixedSize: const Size(50, 50),
           ),
-          icon: const Icon(Iconsax.notification),
+          icon: Icon(Iconsax.heart),
         ),
       ],
     );
