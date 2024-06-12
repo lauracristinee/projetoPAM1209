@@ -15,29 +15,29 @@ class _MainScreenState extends State<MainScreen> {
   List screens = const [
     HomeScreen(),
     Scaffold(),
-    Scaffold(),
   ]; 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white ,
+        color: Colors.white,
         height: 70,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             GestureDetector(
               onTap: () => setState(() {
                 currentTab = 0;
               }),
               child: Column(
+                mainAxisSize: MainAxisSize.min, 
                 children: [
                   Icon(
                     currentTab == 0 ? Iconsax.home5 : Iconsax.home,
                     color: currentTab == 0 ? kprimaryColor : Colors.grey,
                   ),
-                  Text('Home',  
+                  Text(barhome,  
                     style: 
                       TextStyle(
                         fontSize: 14,
@@ -52,36 +52,17 @@ class _MainScreenState extends State<MainScreen> {
                 currentTab = 1;
               }),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    currentTab == 1 ? Iconsax.heart5 : Iconsax.heart,
+                    currentTab == 1 ? Iconsax.setting5 : Iconsax.setting,
                     color: currentTab == 1 ? kprimaryColor : Colors.grey,
                   ),
-                  Text('Favoritos',  
+                  Text(barconfig,  
                     style: 
                       TextStyle(
                         fontSize: 14,
                         color: currentTab == 1 ? kprimaryColor : Colors.grey,
-                      ),
-                  )
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () => setState(() {
-                currentTab = 2;
-              }),
-              child: Column(
-                children: [
-                  Icon(
-                    currentTab == 2 ? Iconsax.setting5 : Iconsax.setting,
-                    color: currentTab == 2 ? kprimaryColor : Colors.grey,
-                  ),
-                  Text('Configuração',  
-                    style: 
-                      TextStyle(
-                        fontSize: 14,
-                        color: currentTab == 2 ? kprimaryColor : Colors.grey,
                       ),
                   )
                 ],
