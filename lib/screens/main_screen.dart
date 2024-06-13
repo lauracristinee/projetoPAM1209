@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
                 children: [
                   Icon(
                     currentTab == 0 ? Iconsax.home5 : Iconsax.home,
-                    color: currentTab == 0 ? kprimaryColor : Colors.grey,
+                    color: currentTab == 0 ? kprimaryColor : Color(0xFF9B5DE5),
                   ),
                   Text(barhome,  
                     style: 
@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
                 children: [
                   Icon(
                     currentTab == 1 ? Iconsax.setting5 : Iconsax.setting,
-                    color: currentTab == 1 ? kprimaryColor : Colors.grey,
+                    color: currentTab == 1 ? kprimaryColor : Color(0xFF9B5DE5),
                   ),
                   Text(barconfig,  
                     style: 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // aqui armazeno cores fixas
 
 const kbackgroundColor = Color(0xffEEF1F6);
-const kprimaryColor = Color(0xff568A9F);
+const kprimaryColor = Color(0xFF9B5DE5);
 const ola = "Olá!";
 const apresentacao = "Vamos descobrir eventos!";
 const btnComprar = "Comprar Ingresso";

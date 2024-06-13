@@ -33,7 +33,10 @@ assets:
   - 'images/evento7.png'
   - 'images/evento8.png'
   - 'images/conta.png'
+  - images/geeks.png
   - 'images/banner.png'
+  - 'images/background.png'
+  - 'images/imgmenu.png'
 
 # fonts:
 #   - family: Biotit
