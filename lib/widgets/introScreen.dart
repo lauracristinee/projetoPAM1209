@@ -7,12 +7,14 @@ import 'package:geek_connect/screens/main_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class IntroScreen extends StatefulWidget {
+  const IntroScreen({super.key});
+
   @override
   _IntroScreenState createState() => _IntroScreenState();
 }
 
 class _IntroScreenState extends State<IntroScreen> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   bool onLastPage = false;
 
@@ -35,7 +37,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ],
           ),
           Container(
-            alignment: Alignment(0, 0.75),
+            alignment: const Alignment(0, 0.75),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -45,7 +47,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   onTap: () {
                     _controller.jumpToPage(2);
                   },
-                  child: Text('Pular'),
+                  child: const Text('Pular'),
                 ),
 
                 SmoothPageIndicator(controller: _controller, count: 3),
@@ -56,22 +58,22 @@ class _IntroScreenState extends State<IntroScreen> {
                   onTap: () {
                     Navigator.push(context,
                       MaterialPageRoute(builder: (context) {
-                        return MainScreen();
+                        return const MainScreen();
                         },
                       ),
                     );
                   },
-                  child: Text('Iniciar'),
+                  child: const Text('Iniciar'),
                 ) 
                 //proximo
                 : GestureDetector(
                   onTap: () {
                     _controller.nextPage(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn,
                     );
                   },
-                  child: Text('Proximo'),
+                  child: const Text('Proximo'),
                 ),
               ],
             ),

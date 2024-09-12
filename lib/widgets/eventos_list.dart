@@ -9,7 +9,7 @@ import 'package:iconsax/iconsax.dart';
 // Aqui é a parte eventos por SP, todos os dados vêm de uma classe Eventos que armazena todos os dados relacionados aos eventos
 
 class EventosList extends StatefulWidget {
-  const EventosList({Key? key}) : super(key: key);
+  const EventosList({super.key});
 
   @override
   _EventosListState createState() => _EventosListState();
@@ -116,7 +116,7 @@ class _EventosListState extends State<EventosList> {
                                 color: Colors.grey,
                               ),
                               Text(
-                                "${eventos[index].eventoData}",
+                                eventos[index].eventoData,
                                 style: const TextStyle(
                                   fontSize: 12,
                                   color: Colors.grey,

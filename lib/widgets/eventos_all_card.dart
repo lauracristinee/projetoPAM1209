@@ -49,7 +49,7 @@ class EventosCard extends StatelessWidget {
                     color: Colors.grey,
                   ),
                   Text(
-                    "${eventos.eventoData}",
+                    eventos.eventoData,
                     style: const TextStyle(
                       fontSize: 12,
                       color: Colors.grey,

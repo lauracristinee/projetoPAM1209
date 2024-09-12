@@ -35,7 +35,7 @@ class Categorias extends StatelessWidget {
             categoria[index],
             style: TextStyle(
               color: currentCat == categoria[index] 
-                ? Color.fromARGB(255, 79, 11, 206) 
+                ? const Color.fromARGB(255, 79, 11, 206) 
                 : Colors.grey.shade700,
             ), 
           ),

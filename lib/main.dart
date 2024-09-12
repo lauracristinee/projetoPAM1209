@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BuildContext, ColorScheme, MaterialApp, StatelessWidget, ThemeData, Widget, runApp;
 import 'package:geek_connect/widgets/introScreen.dart';
 import 'package:geek_connect/widgets/constantes.dart';
 void main() {
@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp ({Key? key}) : super (key:key);
+  const MyApp ({super.key});
 
   @override
   Widget build(BuildContext context) {

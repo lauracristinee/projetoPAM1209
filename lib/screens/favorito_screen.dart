@@ -8,8 +8,7 @@ import 'package:iconsax/iconsax.dart';
 class FavoritosScreen extends StatelessWidget {
   final List<Evento> listaFavoritos;
 
-  const FavoritosScreen({required this.listaFavoritos, Key? key})
-      : super(key: key);
+  const FavoritosScreen({required this.listaFavoritos, super.key});
 
   @override
   Widget build(BuildContext context) {

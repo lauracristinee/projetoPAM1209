@@ -118,7 +118,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: Container(
                 width: 50,
@@ -129,7 +129,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                 ),
               ),
             ),  
-            SizedBox(height: 10),      
+            const SizedBox(height: 10),      
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
